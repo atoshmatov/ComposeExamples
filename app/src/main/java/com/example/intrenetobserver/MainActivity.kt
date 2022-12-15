@@ -4,8 +4,9 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
-import com.example.intrenetobserver.searchWidget.MainSearchScreen
+import androidx.compose.foundation.layout.Column
 import com.example.intrenetobserver.searchWidget.MainViewModel
+import com.example.intrenetobserver.shimmerAnimation.AnimatedShimmer
 import com.example.intrenetobserver.ui.theme.IntrenetObserverTheme
 
 
@@ -17,7 +18,11 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             IntrenetObserverTheme {
-                MainSearchScreen(mainViewModel = viewModel)
+                Column {
+                    repeat(14) {
+                        AnimatedShimmer()
+                    }
+                }
             }
         }
     }
