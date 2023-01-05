@@ -16,7 +16,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -43,7 +42,7 @@ fun AnimatedShimmer() {
         targetValue = 1000f,
         animationSpec = infiniteRepeatable(
             animation = tween(
-                durationMillis = 1000,
+                durationMillis = 1500,
                 easing = FastOutSlowInEasing
             )
         )
@@ -72,7 +71,7 @@ fun ShimmerGridItem(brush: Brush) {
         Spacer(
             modifier = Modifier
                 .size(80.dp)
-                .clip(CircleShape)
+                .clip(RoundedCornerShape(4.dp))
                 .background(brush)
         )
 
@@ -83,7 +82,7 @@ fun ShimmerGridItem(brush: Brush) {
             Spacer(
                 modifier = Modifier
                     .height(20.dp)
-                    .clip(RoundedCornerShape(10.dp))
+                    .clip(RoundedCornerShape(4.dp))
                     .fillMaxWidth(fraction = 0.7f)
                     .background(brush)
             )
@@ -93,7 +92,7 @@ fun ShimmerGridItem(brush: Brush) {
             Spacer(
                 modifier = Modifier
                     .height(20.dp)
-                    .clip(RoundedCornerShape(10.dp))
+                    .clip(RoundedCornerShape(4.dp))
                     .fillMaxWidth(fraction = 0.9f)
                     .background(brush)
             )

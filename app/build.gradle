@@ -68,4 +68,13 @@ dependencies {
     //slider Interface
     implementation 'com.r0adkll:slidableactivity:2.1.0'
 
+    //constrain layout
+    implementation 'androidx.constraintlayout:constraintlayout-compose:1.0.1'
+
+    //Data picker
+    implementation "com.maxkeppeler.sheets-compose-dialogs:core:1.0.2"
+    implementation "com.maxkeppeler.sheets-compose-dialogs:calendar:1.0.2"
+    implementation "com.maxkeppeler.sheets-compose-dialogs:clock:1.0.2"
+
+
 }
