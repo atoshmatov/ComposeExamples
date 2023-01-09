@@ -1,4 +1,4 @@
-package com.example.intrenetobserver
+package com.example.intrenetobserver.navigation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -19,7 +19,7 @@ import androidx.navigation.compose.rememberNavController
 fun DetailScreen(
     navHostController: NavHostController
 ) {
-   /* Box(
+    Box(
         modifier = Modifier
             .fillMaxSize()
             .background(Color.Cyan),
@@ -38,7 +38,7 @@ fun DetailScreen(
             fontWeight = FontWeight.Bold,
             fontSize = MaterialTheme.typography.h3.fontSize
         )
-    }*/
+    }
 }
 
 @Preview(showBackground = true)

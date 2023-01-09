@@ -1,4 +1,4 @@
-package com.example.intrenetobserver
+package com.example.intrenetobserver.navigation
 
 
 import android.content.Context
@@ -15,7 +15,7 @@ fun SetNavGraph(
     navHostController: NavHostController,
     context: Context
 ) {
-   /* NavHost(
+    NavHost(
         navController = navHostController,
         startDestination = Screen.Home.route,
     ) {
@@ -37,5 +37,5 @@ fun SetNavGraph(
             ).show()
             DetailScreen(navHostController = navHostController)
         }
-    }*/
+    }
 }
