@@ -7,6 +7,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
 import com.example.intrenetobserver.bottomBar.MainScreen
+import com.example.intrenetobserver.datapicker.ExampleScreen
 import com.example.intrenetobserver.searchWidget.MainViewModel
 import com.example.intrenetobserver.ui.theme.IntrenetObserverTheme
 
@@ -21,7 +22,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             IntrenetObserverTheme {
-/*
+                /*
                 Column {
                     var process by remember {
                         mutableStateOf(0f)
@@ -37,8 +38,8 @@ class MainActivity : ComponentActivity() {
                     )
                 }
 */
-//                ExampleScreen()
-                MainScreen()
+                ExampleScreen()
+//                MainScreen()
             }
         }
     }
