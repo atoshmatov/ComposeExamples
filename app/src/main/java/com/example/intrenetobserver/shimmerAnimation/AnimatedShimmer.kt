@@ -32,7 +32,7 @@ fun AnimatedShimmer() {
     val shimmerColors = listOf(
         Color.LightGray.copy(alpha = 0.6f),
         Color.LightGray.copy(alpha = 0.2f),
-        Color.LightGray.copy(alpha = 0.6f)
+        Color.LightGray.copy(alpha = 0.6f),
     )
 
     val transition = rememberInfiniteTransition()
@@ -43,48 +43,44 @@ fun AnimatedShimmer() {
         animationSpec = infiniteRepeatable(
             animation = tween(
                 durationMillis = 1500,
-                easing = FastOutSlowInEasing
-            )
-        )
+                easing = FastOutSlowInEasing,
+            ),
+        ),
     )
 
     val brush = Brush.linearGradient(
         colors = shimmerColors,
         start = Offset.Zero,
-        end = Offset(x = translateAnim.value, y = translateAnim.value)
+        end = Offset(x = translateAnim.value, y = translateAnim.value),
     )
 
     ShimmerGridItem(brush = brush)
 }
 
-
 @Composable
 fun ShimmerGridItem(brush: Brush) {
-
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .padding(all = 10.dp),
-        verticalAlignment = Alignment.CenterVertically
+        verticalAlignment = Alignment.CenterVertically,
     ) {
-
         Spacer(
             modifier = Modifier
                 .size(80.dp)
                 .clip(RoundedCornerShape(4.dp))
-                .background(brush)
+                .background(brush),
         )
 
         Spacer(modifier = Modifier.width(10.dp))
 
         Column(verticalArrangement = Arrangement.Center) {
-
             Spacer(
                 modifier = Modifier
                     .height(20.dp)
                     .clip(RoundedCornerShape(4.dp))
                     .fillMaxWidth(fraction = 0.7f)
-                    .background(brush)
+                    .background(brush),
             )
 
             Spacer(modifier = Modifier.height(10.dp))
@@ -94,12 +90,11 @@ fun ShimmerGridItem(brush: Brush) {
                     .height(20.dp)
                     .clip(RoundedCornerShape(4.dp))
                     .fillMaxWidth(fraction = 0.9f)
-                    .background(brush)
+                    .background(brush),
             )
         }
     }
 }
-
 
 @Preview(showBackground = true)
 @Composable
@@ -109,9 +104,9 @@ fun ShimmerAnimatedPreview() {
             listOf(
                 Color.LightGray.copy(alpha = 0.6f),
                 Color.LightGray.copy(alpha = 0.2f),
-                Color.LightGray.copy(alpha = 0.6f)
-            )
-        )
+                Color.LightGray.copy(alpha = 0.6f),
+            ),
+        ),
     )
 }
 
@@ -123,8 +118,8 @@ fun ShimmerAnimatedDarkPreview() {
             listOf(
                 Color.LightGray.copy(alpha = 0.6f),
                 Color.LightGray.copy(alpha = 0.2f),
-                Color.LightGray.copy(alpha = 0.6f)
-            )
-        )
+                Color.LightGray.copy(alpha = 0.6f),
+            ),
+        ),
     )
 }
