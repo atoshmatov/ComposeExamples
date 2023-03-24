@@ -85,7 +85,7 @@ class MainActivity : ComponentActivity() {
                                     Spacer(modifier = Modifier.width(16.dp))
                                     Text(
                                         text = "This is a long text to show that our shimmer display " +
-                                            "is looking perfectly fine",
+                                                "is looking perfectly fine",
                                     )
                                 }
                             },
