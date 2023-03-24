@@ -91,7 +91,7 @@ class MainActivity : ComponentActivity() {
                             },
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(16.dp),
+                                .padding(16.dp)
                         )
                     }
                 }
